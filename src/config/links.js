@@ -25,6 +25,9 @@ export const mapsUrl =
   GOOGLE_MAPS_URL.trim() ||
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS.searchQuery)}`
 
+/** Mapa incorporado por busca do endereço (sem chave de API e sem coordenadas fixas). */
+export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS.searchQuery)}&hl=pt-BR&z=16&output=embed`
+
 if (import.meta.env.DEV) {
   const pending = []
   if (!bookingUrl) pending.push('WHATSAPP_NUMBER')

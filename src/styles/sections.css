@@ -6,7 +6,7 @@
 .photo {
   position: relative;
   overflow: hidden;
-  background: var(--beige);
+  background: var(--champagne);
 }
 
 .photo img {
@@ -19,7 +19,7 @@
 .photo.is-broken {
   background:
     radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.55), transparent 55%),
-    linear-gradient(160deg, var(--beige), var(--sage-soft));
+    linear-gradient(160deg, var(--champagne), var(--gold-soft));
 }
 
 /* Máscara das palavras do título (animação de entrada). */
@@ -40,8 +40,8 @@
   padding-top: calc(var(--header-h) + clamp(1.5rem, 4vw, 3rem));
   padding-bottom: clamp(3rem, 7vw, 6rem);
   background:
-    radial-gradient(60rem 36rem at 92% 8%, rgba(201, 209, 198, 0.45), transparent 70%),
-    var(--ivory);
+    radial-gradient(60rem 36rem at 92% 8%, rgba(236, 223, 195, 0.55), transparent 70%),
+    var(--paper);
 }
 
 .hero__inner {
@@ -62,7 +62,7 @@
   font-size: clamp(2.7rem, 1.7rem + 5vw, 5.4rem);
   line-height: 1.02;
   letter-spacing: -0.018em;
-  color: var(--green);
+  color: var(--ink);
   text-wrap: balance;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .hero__place svg {
-  color: var(--green);
+  color: var(--gold-deep);
 }
 
 .hero__visual {
@@ -119,7 +119,7 @@
   position: absolute;
   inset: 0;
   transform: translate(-14px, 14px);
-  border: 1px solid rgba(52, 72, 61, 0.4);
+  border: 1px solid rgba(138, 106, 51, 0.4);
   border-radius: 999px 999px var(--radius-l) var(--radius-l);
 }
 
@@ -163,16 +163,6 @@
   border-radius: var(--radius-l);
 }
 
-.about__leaf {
-  position: absolute;
-  right: -1.25rem;
-  bottom: -1.25rem;
-  width: 55%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--beige);
-}
-
 .about__copy {
   display: grid;
   gap: 1.75rem;
@@ -190,7 +180,7 @@
 
 /* ───────── Atendimento ───────── */
 .services {
-  background: var(--beige);
+  background: var(--champagne);
 }
 
 .services__head {
@@ -200,7 +190,7 @@
 }
 
 .services .prose {
-  color: #5a564f;
+  color: var(--muted);
 }
 
 .cards {
@@ -225,18 +215,8 @@
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(52, 72, 61, 0.18);
-  box-shadow: 0 22px 40px -28px rgba(38, 54, 41, 0.45);
-}
-
-.card__index {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.5rem;
-  font-family: var(--font-display);
-  font-size: 2.6rem;
-  line-height: 1;
-  color: var(--beige-deep);
+  border-color: rgba(138, 106, 51, 0.18);
+  box-shadow: 0 22px 40px -28px rgba(107, 80, 37, 0.45);
 }
 
 .card__icon {
@@ -246,16 +226,16 @@
   height: 56px;
   margin-bottom: 0.75rem;
   border-radius: 50%;
-  background: #e6ebe3;
-  color: var(--green);
+  background: #f7f1e4;
+  color: var(--gold-deep);
   transition:
     background-color 0.4s var(--ease),
     color 0.4s var(--ease);
 }
 
 .card:hover .card__icon {
-  background: var(--green);
-  color: var(--ivory);
+  background: var(--gold-deep);
+  color: var(--paper);
 }
 
 .card__title {
@@ -263,7 +243,7 @@
   font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.15;
-  color: var(--green);
+  color: var(--ink);
 }
 
 .card__text {
@@ -284,7 +264,7 @@
   font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
   font-style: italic;
   line-height: 1.2;
-  color: var(--green);
+  color: var(--ink);
   text-wrap: balance;
 }
 
@@ -334,8 +314,8 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--green);
-  color: var(--ivory);
+  background: var(--gold-deep);
+  color: var(--paper);
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-style: italic;
@@ -345,7 +325,7 @@
 .experience__badge strong {
   display: block;
   font-weight: 700;
-  color: var(--green);
+  color: var(--gold-deep);
 }
 
 .experience__badge-sub {
@@ -381,7 +361,7 @@
   align-items: center;
   padding: clamp(1.25rem, 4vw, 3.5rem);
   border-radius: var(--radius-l);
-  background: #e6ebe3;
+  background: #f7f1e4;
 }
 
 .course__photo {
@@ -400,7 +380,7 @@
 }
 
 .course .prose {
-  color: #4f5a50;
+  color: var(--muted);
 }
 
 .course__action {
@@ -411,7 +391,7 @@
 
 .course__note {
   font-size: 0.92rem;
-  color: #4f5a50;
+  color: var(--muted);
 }
 
 @media (min-width: 900px) {
@@ -447,8 +427,8 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #e6ebe3;
-  color: var(--green);
+  background: #f7f1e4;
+  color: var(--gold-deep);
 }
 
 .address-card__text {
@@ -458,7 +438,7 @@
   font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.8rem);
   font-weight: 500;
   line-height: 1.3;
-  color: var(--green);
+  color: var(--ink);
 }
 
 .address-card__actions {
@@ -487,8 +467,8 @@
   position: relative;
   overflow: hidden;
   padding-block: calc(var(--section-y) * 1.1);
-  background: var(--green);
-  color: var(--ivory);
+  background: var(--gold-deep);
+  color: var(--paper);
   text-align: center;
 }
 
@@ -502,35 +482,35 @@
 }
 
 .final .title {
-  color: var(--ivory);
+  color: var(--paper);
 }
 
 .final .title em {
-  color: var(--sage-soft);
+  color: var(--gold-soft);
 }
 
 .final .prose {
-  color: rgba(250, 248, 244, 0.82);
+  color: rgba(255, 255, 255, 0.82);
   justify-items: center;
 }
 
 .final .prose__strong {
-  color: var(--ivory);
+  color: var(--paper);
 }
 
 .final :focus-visible {
-  outline-color: var(--ivory);
+  outline-color: var(--paper);
 }
 
 .final__pending {
   margin-top: 0.9rem;
   font-size: 0.9rem;
-  color: rgba(250, 248, 244, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .final__ring {
   position: absolute;
-  border: 1px solid rgba(250, 248, 244, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -552,4 +532,41 @@
 /* Curso já traz o espaçamento inferior; evita um vazio duplo antes da localização. */
 .course + .location {
   padding-top: 0;
+}
+
+/* ───────── Mapa incorporado ───────── */
+.map {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid rgba(184, 151, 90, 0.45);
+  border-radius: var(--radius-l);
+  background: var(--champagne);
+}
+
+.map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 900px) {
+  .location__inner {
+    align-items: stretch;
+  }
+  .map {
+    min-height: 520px;
+  }
+}
+
+/* Endereço: cartão mais leve dentro da coluna de texto. */
+.location__copy .address-card {
+  margin-top: 0.75rem;
+  border-color: rgba(184, 151, 90, 0.4);
+}
+
+.location__copy .address-card__actions {
+  grid-template-columns: 1fr;
 }

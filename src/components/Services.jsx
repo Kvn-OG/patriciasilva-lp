@@ -38,11 +38,8 @@ export default function Services() {
         </header>
 
         <ul className="cards">
-          {BENEFITS.map(({ icon: Icon, title, text }, index) => (
+          {BENEFITS.map(({ icon: Icon, title, text }) => (
             <li className="card" key={title} data-card>
-              <span className="card__index" aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </span>
               <span className="card__icon">
                 <Icon size={26} strokeWidth={1.5} aria-hidden="true" />
               </span>

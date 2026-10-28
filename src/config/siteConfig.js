@@ -6,7 +6,7 @@
 
 // ─── Contatos (PENDENTES: preencher quando a Patricia informar) ─────────────
 // Número com DDI + DDD, apenas dígitos. Ex.: '5527999999999'
-export const WHATSAPP_NUMBER = ''
+export const WHATSAPP_NUMBER = '5527997870881'
 
 export const WHATSAPP_BOOKING_MESSAGE =
   'Olá, Patricia! Conheci seu trabalho pelo site e gostaria de saber mais sobre os atendimentos e os horários disponíveis.'

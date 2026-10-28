@@ -21,12 +21,14 @@ Não há backend, banco de dados nem variáveis de ambiente. Nada sensível é a
 
 | Campo | Efeito enquanto vazio |
 | --- | --- |
-| `WHATSAPP_NUMBER` (DDI+DDD+número, só dígitos) | Botões de agendamento aparecem **desativados** (sem link quebrado) |
+| `WHATSAPP_NUMBER` (DDI+DDD+número, só dígitos) | **Preenchido** (5527997870881). Se esvaziar, os botões de agendamento ficam desativados |
 | `COURSE_URL` | Botão do curso usa o WhatsApp com mensagem do curso; sem WhatsApp, fica desativado |
 | `GOOGLE_MAPS_URL` | Opcional: o link é gerado por busca do endereço |
 | `INSTAGRAM_URL` | Opcional: o link não aparece no rodapé |
 
-Também pendente: **fotografias reais** e o **domínio** (trocar `og:image` em `index.html` por URL absoluta).
+Também pendente: **fotografias reais**, o **favicon definitivo** (hoje a página fica sem favicon; ver comentário em `index.html`) e o **domínio** (trocar `og:image` em `index.html` por URL absoluta).
+
+O mapa da seção Localização é o embed do Google Maps por busca do endereço (sem chave de API). Confirme com a Patricia se o ponto marcado é o correto; se necessário, defina `GOOGLE_MAPS_URL`.
 
 ## Imagens
 

@@ -11,7 +11,6 @@ export default function About() {
           <div className="about__photo" data-reveal-photo>
             <Photo image={IMAGES.cuidado} sizes="(min-width: 900px) 40vw, 90vw" />
           </div>
-          <span className="about__leaf" aria-hidden="true" />
         </div>
 
         <div className="about__copy">
