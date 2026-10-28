@@ -1,22 +1,28 @@
 import Button from './Button'
 import Photo from './Photo'
+import Title from './Title'
 import { IMAGES } from '../config/siteConfig'
 import { bookingUrl } from '../config/links'
 
 export default function About() {
   return (
     <section className="section about" id="sobre" aria-labelledby="about-title">
+      <span className="ghost ghost--left" aria-hidden="true" data-ghost>
+        Cuidado
+      </span>
+
       <div className="about__inner container">
         <div className="about__visual">
-          <div className="about__photo" data-reveal-photo>
-            <Photo image={IMAGES.cuidado} sizes="(min-width: 900px) 40vw, 90vw" />
+          <div className="capsule capsule--tall" data-reveal-photo>
+            <Photo image={IMAGES.cuidado} sizes="(min-width: 900px) 20vw, 44vw" />
+          </div>
+          <div className="capsule capsule--short" data-reveal-photo>
+            <Photo image={IMAGES.detalhes} sizes="(min-width: 900px) 20vw, 44vw" />
           </div>
         </div>
 
         <div className="about__copy">
-          <h2 id="about-title" className="title" data-reveal>
-            Cuidar dos seus pés também é uma forma de cuidar de <em>você.</em>
-          </h2>
+          <Title id="about-title" text="Cuidar dos seus pés também é uma forma de cuidar de você." emphasis="você" />
           <div className="prose" data-reveal>
             <p>
               Sei que, na correria do dia a dia, muitas vezes deixamos o cuidado com os nossos pés para depois. Mas

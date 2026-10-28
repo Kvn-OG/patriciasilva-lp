@@ -1,4 +1,6 @@
 import Photo from './Photo'
+import Title from './Title'
+import { BLOBS, blobProps } from '../config/blobs'
 import { IMAGES } from '../config/siteConfig'
 
 export default function Experience() {
@@ -6,18 +8,11 @@ export default function Experience() {
     <section className="section experience" aria-labelledby="experience-title">
       <div className="experience__inner container">
         <div className="experience__copy">
-          <p className="experience__badge" data-reveal>
-            <span className="experience__plus" aria-hidden="true">
-              8+
-            </span>
-            <span>
-              <strong>Mais de 8 anos</strong>
-              <span className="experience__badge-sub">de terapia podal</span>
-            </span>
-          </p>
-          <h2 id="experience-title" className="title" data-reveal>
-            Mais de 8 anos dedicados ao <em>cuidado dos pés.</em>
-          </h2>
+          <Title
+            id="experience-title"
+            text="Mais de 8 anos dedicados ao cuidado dos pés."
+            emphasis="cuidado dos pés"
+          />
           <div className="prose" data-reveal>
             <p>
               Ao longo da minha trajetória na terapia podal, venho dedicando meu trabalho ao cuidado dos pés e à
@@ -32,9 +27,18 @@ export default function Experience() {
         </div>
 
         <div className="experience__visual">
-          <div className="experience__photo" data-reveal-photo>
+          <div className="experience__photo" data-reveal-photo {...blobProps(BLOBS.experience)}>
             <Photo image={IMAGES.ambiente} sizes="(min-width: 900px) 50vw, 92vw" />
           </div>
+          <p className="seal" data-chip>
+            <span className="seal__num" aria-hidden="true">
+              8+
+            </span>
+            <span className="seal__text">
+              <strong>Mais de 8 anos</strong>
+              de terapia podal
+            </span>
+          </p>
         </div>
       </div>
     </section>

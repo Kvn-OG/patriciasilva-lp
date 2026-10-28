@@ -1,16 +1,21 @@
+import { useState } from 'react'
 import { MapPin, MessageCircle } from 'lucide-react'
 import Button from './Button'
+import Title from './Title'
 import { ADDRESS } from '../config/siteConfig'
 import { bookingUrl, mapEmbedUrl, mapsUrl } from '../config/links'
 
 export default function Location() {
+  const [mapActive, setMapActive] = useState(false)
+
   return (
     <section className="section location" id="localizacao" aria-labelledby="location-title">
+      <span className="ghost ghost--right" aria-hidden="true" data-ghost>
+        Cariacica
+      </span>
       <div className="location__inner container">
         <div className="location__copy">
-          <h2 id="location-title" className="title" data-reveal>
-            Estou esperando você em <em>Cariacica!</em>
-          </h2>
+          <Title id="location-title" text="Estou esperando você em Cariacica!" emphasis="Cariacica" />
           <p className="prose" data-reveal>
             Meu espaço está localizado na Avenida Expedito Garcia, em Cariacica — ES, preparado para receber você para
             o seu momento de cuidado.
@@ -36,7 +41,15 @@ export default function Location() {
           </div>
         </div>
 
-        <div className="map" data-reveal-photo>
+        <div
+          className={`map ${mapActive ? 'is-active' : ''}`}
+          data-reveal-photo
+          onClick={() => setMapActive(true)}
+          onMouseLeave={() => setMapActive(false)}
+        >
+          <p className="map__hint" aria-hidden="true">
+            Clique para interagir com o mapa
+          </p>
           <iframe
             title="Mapa com a localização do atendimento: Avenida Expedito Garcia, 1453, Cariacica — ES"
             src={mapEmbedUrl}

@@ -1,5 +1,7 @@
 import { HandHeart, Leaf, UserRound, MessageCircle } from 'lucide-react'
 import Button from './Button'
+import Title from './Title'
+import Wave from './Wave'
 import { bookingUrl } from '../config/links'
 
 const BENEFITS = [
@@ -22,12 +24,13 @@ const BENEFITS = [
 
 export default function Services() {
   return (
-    <section className="section services" id="atendimento" aria-labelledby="services-title">
+    <section className="band services" id="atendimento" aria-labelledby="services-title">
+      <Wave position="top" />
+      <Wave position="bottom" />
+
       <div className="container">
         <header className="services__head">
-          <h2 id="services-title" className="title" data-reveal>
-            Um cuidado especial, <em>pensado para você.</em>
-          </h2>
+          <Title id="services-title" text="Um cuidado especial, pensado para você." emphasis="pensado para você" />
           <div className="prose" data-reveal>
             <p>Cada pessoa tem suas próprias necessidades, e o cuidado com os pés merece atenção.</p>
             <p>
@@ -41,7 +44,7 @@ export default function Services() {
           {BENEFITS.map(({ icon: Icon, title, text }) => (
             <li className="card" key={title} data-card>
               <span className="card__icon">
-                <Icon size={26} strokeWidth={1.5} aria-hidden="true" />
+                <Icon size={28} strokeWidth={1.5} aria-hidden="true" />
               </span>
               <h3 className="card__title">{title}</h3>
               <p className="card__text">{text}</p>
@@ -51,7 +54,7 @@ export default function Services() {
 
         <div className="services__close" data-reveal>
           <p className="quote">Você merece se sentir bem cuidado(a) em cada visita.</p>
-          <Button href={bookingUrl} external icon={MessageCircle}>
+          <Button href={bookingUrl} external variant="light" icon={MessageCircle}>
             Agendar pelo WhatsApp
           </Button>
         </div>

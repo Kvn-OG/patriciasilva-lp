@@ -2,7 +2,7 @@
 
 Landing page de conversão (agendamento presencial em Cariacica — ES) com divulgação secundária do curso Spa dos Pés Completo.
 
-**Stack:** React 19 + Vite, CSS3 próprio, GSAP + ScrollTrigger (`@gsap/react`), Lucide React.
+**Stack:** React 19 + Vite, CSS3 próprio, GSAP + ScrollTrigger + DrawSVG (`@gsap/react`), Lenis (smooth scroll), Lucide React.
 
 ## Executar localmente
 
@@ -46,4 +46,8 @@ src/
 
 ## Animações
 
-Entrada do hero (título por palavra, textos, CTA, foto com clip-path), reveals por rolagem (uma vez), fotos com clip-path, cards com stagger, cabeçalho que ganha fundo ao rolar (CSS), preenchimento circular nos botões e círculos do CTA final. Com `prefers-reduced-motion: reduce` nenhuma animação GSAP é registrada e o conteúdo fica estático e visível.
+Smooth scroll inercial (Lenis, sincronizado ao ScrollTrigger; âncoras também rolam suavemente). Entrada do hero (título por palavra, textos, CTA, foto orgânica, chips flutuantes), títulos de seção por palavra, reveals por rolagem (uma vez), fotos com clip-path e parallax suave, formas orgânicas que "respiram" (só enquanto visíveis), ondas douradas em loop, ramos botânicos que se desenham, palavras-fantasma que deslizam, cards com stagger, preenchimento circular nos botões e atalho flutuante do WhatsApp (aparece após o hero).
+
+Com `prefers-reduced-motion: reduce` nenhuma animação GSAP nem o Lenis são iniciados: o conteúdo fica estático e visível, e a rolagem é nativa.
+
+O mapa só responde ao mouse depois do clique (evita que o scroll da página "prenda" no mapa).

@@ -1,5 +1,8 @@
+import Botanical from './Botanical'
 import Button from './Button'
 import Photo from './Photo'
+import Title from './Title'
+import { BLOBS, blobProps } from '../config/blobs'
 import { IMAGES } from '../config/siteConfig'
 import { courseUrl } from '../config/links'
 
@@ -7,8 +10,10 @@ export default function Course() {
   return (
     <section className="course" id="curso" aria-labelledby="course-title">
       <div className="course__inner container">
+        <Botanical className="course__leaf" />
+
         <div className="course__visual">
-          <div className="course__photo" data-reveal-photo>
+          <div className="course__photo" data-reveal-photo {...blobProps(BLOBS.course)}>
             <Photo image={IMAGES.spaPes} sizes="(min-width: 900px) 45vw, 92vw" />
           </div>
         </div>
@@ -17,9 +22,7 @@ export default function Course() {
           <p className="eyebrow" data-reveal>
             Curso Spa dos Pés Completo
           </p>
-          <h2 id="course-title" className="title" data-reveal>
-            Quer conhecer mais sobre o universo do <em>Spa dos Pés?</em>
-          </h2>
+          <Title id="course-title" text="Quer conhecer mais sobre o universo do Spa dos Pés?" emphasis="Spa dos Pés" />
           <div className="prose" data-reveal>
             <p>
               Além dos meus atendimentos, também compartilho meus conhecimentos por meio do curso Spa dos Pés Completo.

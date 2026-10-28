@@ -3,6 +3,7 @@ import { Menu, X, MessageCircle } from 'lucide-react'
 import Button from './Button'
 import { NAV_LINKS, PROFESSIONAL } from '../config/siteConfig'
 import { bookingUrl } from '../config/links'
+import { startScroll, stopScroll } from '../animations/smoothScroll'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -20,10 +21,12 @@ export default function Header() {
     }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
+    stopScroll()
     menuRef.current?.querySelector('a')?.focus()
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
+      startScroll()
     }
   }, [open])
 

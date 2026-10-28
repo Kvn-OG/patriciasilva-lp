@@ -8,6 +8,7 @@ import Course from './components/Course'
 import Location from './components/Location'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
+import FloatingCTA from './components/FloatingCTA'
 import { useLandingAnimations } from './animations/useLandingAnimations'
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <FloatingCTA />
     </div>
   )
 }
