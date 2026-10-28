@@ -1,0 +1,17 @@
+/* Movimento reduzido: sem rolagem suave e sem transições/animações decorativas.
+   O JS (GSAP) já não registra animações nesse caso, então o conteúdo fica
+   visível desde o primeiro quadro. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
